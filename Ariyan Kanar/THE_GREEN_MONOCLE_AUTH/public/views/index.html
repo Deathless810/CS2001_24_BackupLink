@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Green Monocle</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="/css/images/logo_green.png" alt="The Green Monocle Logo" class="logo">            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="Categories.html">Categories</a></li>
+                <li><a href="Trending.html">Trending</a></li>
+                <li><a href="articles.html">articles</a></li>
+                <li><a href="links.html">links</a></li>
+
+            </ul>
+        </nav>
+        <div class="login-container">
+            <a href="login.html" class="login-button">Login</a>
+            <a href="signup.html" class="signup-button">signup</a>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('.login-button').addEventListener('click', function(event) {
+                    event.preventDefault(); 
+                    window.location.href = '/login';
+                }); 
+            });
+        </script>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('.signup-button').addEventListener('click', function(event) {
+                    event.preventDefault(); 
+                    window.location.href = '/signup';
+                }); 
+            });
+        </script>
+
+    </header>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
+<!-- . -->

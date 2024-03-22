@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Signup</title>
+  <link rel="stylesheet" href="/css/login.css"> <!-- Assuming this CSS file also applies to the signup form -->
+</head>
+<body>
+  <div class="container">
+    <h1>Signup</h1>
+
+   
+    <form id="signupForm">
+      <label for="signupUsername">Username:</label>
+      <input type="text" id="signupUsername" name="username" required>
+      <label for="signupEmail">Email:</label>
+      <input type="email" id="signupEmail" name="email" required>
+      <label for="signupPassword">Password:</label>
+      <input type="password" id="signupPassword" name="password" required>
+      <label for="signupPasswordRetype">Retype Password:</label>
+      <input type="password" id="signupPasswordRetype" name="passwordRetype" required>
+      <button type="submit">Signup</button>
+    </form>
+  </div>
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+
+      const formData = new FormData(this);
+      const data = {};
+      formData.forEach((value, key) => { data[key] = value; });
+
+      // Send the form data to the server using fetch
+      fetch('http://localhost:3000/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+      .then(response => {
+        if (response.ok) {
+          // Redirect to the homepage upon successful signup
+          window.location.href = '/';
+        } else {
+          // Handle errors or unsuccessful signup attempts here
+          alert('Signup failed. Please try again.');
+        }
+      })
+      .catch(error => console.error('Error:', error));
+    });
+  </script>
+</body>
+</html>

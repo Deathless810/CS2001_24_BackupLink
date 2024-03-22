@@ -1,0 +1,108 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; 
+}
+
+header {
+    background-color: #43A047; 
+    padding: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.logo-container .logo {
+    display: block;
+    max-width: 100px;
+    margin-left: 1em; 
+}
+
+.nav-links {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex: 2; 
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #ffffff; 
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+}
+
+.login-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login-container .login-button {
+    background-color: #43A047; 
+    color: #ffffff; 
+    padding: 0.5em 1em;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-right: 1em;
+}
+
+.login-container .signup-button {
+    background-color: #43A047; 
+    color: #ffffff; 
+    padding: 0.5em 1em;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-right: 1em;
+}
+
+.articles-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.article-preview {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 30%;
+    text-align: left;
+}
+
+.article-preview h2 {
+    color: #333;
+}
+
+.article-preview h3 {
+    color: grey;
+    font-size: 0.9em;
+}
+
+.latest-articles-banner {
+    background-color: #ffffff; /* Green background to match the header */
+    color: black; /* White text color */
+    text-align: center; /* Center the banner text */
+    padding: 20px 0; /* Add some padding above and below the text */
+    margin-bottom: 20px; /* Space between the banner and the article previews */
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <link rel="stylesheet" href="/css/category.css">
+</head>
+<body>
+    <header>
+  
+    </header>
+
+    <main class="content">
+        <% Object.keys(articlesByCategory).forEach(function(category) { %>
+            <section class="category-section">
+                <h2><%= category %></h2>
+                <% articlesByCategory[category].forEach(function(article) { %>
+                    <a href="/article/<%= article.id %>"><%= article.title %></a><br>
+                <% }); %>
+            </section>
+        <% }); %>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

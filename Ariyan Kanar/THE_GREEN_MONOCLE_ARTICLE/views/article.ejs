@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= article.title %></title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/article.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h1><%= article.title %></h1>
+    </div>
+    <div class="article-meta">
+      By: <%= article.author %> | Published on: <%= new Date(article.date).toLocaleDateString() %>
+    </div>
+    <div class="article-content">
+      <p><%= article.content %></p>
+    </div>
+  </div>
+</body>
+</html>
+

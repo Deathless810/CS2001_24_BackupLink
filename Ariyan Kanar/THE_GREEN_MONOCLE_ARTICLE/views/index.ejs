@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Green Monocle</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="/">
+                <img src="/images/logo_green.png" alt="The Green Monocle Logo" class="logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/categories">Categories</a></li>
+                <li><a href="/trending">Trending</a></li>
+                <li><a href="/articles">Articles</a></li>
+                <li><a href="/links">Links</a></li>
+            </ul>
+        </nav>
+        <div class="login-container">
+            <a href="/login" class="login-button">Login</a>
+            <a href="/signup" class="signup-button">Signup</a>
+        </div>
+    </header>
+
+    <section class="content">
+
+        <div class="latest-articles-banner">
+            <h1>Latest Articles</h1>
+        </div>
+    <section class="content">
+        <section class="articles-display">
+            <% articles.forEach(function(article) { %>
+                <a href="/article/<%= article.id %>" class="article-link">
+                    <div class="article-preview">
+                        <h2><%= article.title %></h2>
+                        <h3 class="author-name"><%= article.author %></h3>
+                    </div>
+                </a>
+            <% }); %>
+        </section>
+    </section>
+    
+                
+            </form>
+        </div>
+    </section>
+
+    <footer>
+    </footer>
+
+</body>
+</html>
